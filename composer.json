@@ -1,0 +1,23 @@
+{
+	"name": "nlybe/lang_selector",
+	"description": "Provides a selector for users to easily change the language. Revised version from original Language Selector plugin by ColdTrick.",
+	"type": "elgg-plugin",
+	"keywords": [
+		"elgg", 
+		"plugin", 
+		"i18n"
+	],
+	"license": "GPL-2.0",
+	"homepage": "https://github.com/nlybe/elgg-lang-selector",
+	"require": {
+        "php": ">=7.4",
+		"composer/installers": "^1.0.8"
+	},
+    "extra": {
+        "installer-name": "lang_selector"
+    },
+	"conflict": {
+		"elgg/elgg": "<4.3",
+		"coldtrick/language_selector": "*"
+	}
+}
