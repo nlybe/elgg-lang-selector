@@ -11,18 +11,18 @@ class ConfigureLangRewriteURL {
 	/**
 	 * Set captcha gatekeeper for actions
 	 *
-	 * @param Hook $hook Hook
+	 * @param Event $event Event
 	 *
 	 * @return array
 	 * @throws \DI\DependencyException
 	 * @throws \DI\NotFoundException
 	 */
-	public function __invoke(\Elgg\Hook $hook) {
+	public function __invoke(\Elgg\Event $event) {
 		// $default_lang = elgg_get_config('language');
 		// $allowed_langs = lang_selector_get_allowed_translations();
-		// $current_lang = get_current_language();
+		// $current_lang = elgg_get_current_language();
  
-		$return = $hook->getValue();	
+		$return = $event->getValue();	
     	if (!LangSelectorOptions::isLangRewriteURLEnabled()) {
 			return $return;
 		}

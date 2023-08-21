@@ -5,7 +5,7 @@
  */
 
 $allowed = lang_selector_get_allowed_translations();
-$current_lang_id = get_current_language();
+$current_lang_id = elgg_get_current_language();
 
 if (count($allowed) <= 1) {
 	return;

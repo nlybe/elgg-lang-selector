@@ -17,7 +17,7 @@
         "installer-name": "lang_selector"
     },
 	"conflict": {
-		"elgg/elgg": "<4.3",
+		"elgg/elgg": "<5.0",
 		"coldtrick/language_selector": "*"
 	}
 }

@@ -39,7 +39,7 @@ class Bootstrap extends DefaultPluginBootstrap {
 			
 			if (is_array($allowed_langs) && count($allowed_langs)>0) {
 				foreach ($allowed_langs as $lang) {
-					elgg_register_plugin_hook_handler('route:rewrite', $lang, \LangSelector\ConfigureLangRewriteURL::class);
+					elgg_register_event_handler('route:rewrite', $lang, \LangSelector\ConfigureLangRewriteURL::class);
 				}
 			}
 		}

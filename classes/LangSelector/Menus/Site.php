@@ -20,19 +20,19 @@ class Site {
 	/**
 	 * Alter url on site and footer menu
 	 *
-	 * @param \Elgg\Hook $hook 'register', 'menu:site' or 'menu:footer'
+	 * @param \Elgg\Event $event 'register', 'menu:site' or 'menu:footer'
 	 *
 	 * @return ElggMenuItem[]
 	 */
-	public static function register(\Elgg\Hook $hook) {
-		$return = $hook->getValue();
+	public static function register(\Elgg\Event $event) {
+		$return = $event->getValue();
 			
     	if (!LangSelectorOptions::isLangRewriteURLEnabled()) {
 			return $return;
 		}
 
 		$default_lang = elgg_get_config('language');
-		$current_lang = get_current_language();
+		$current_lang = elgg_get_current_language();
 		
 		$site_url = elgg_get_site_url();
 		$new_url_prefix = $site_url.$current_lang."/";

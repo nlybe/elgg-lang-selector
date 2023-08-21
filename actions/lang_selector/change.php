@@ -27,5 +27,5 @@ if (!empty($new_lang_id) && array_key_exists($new_lang_id, $installed)) {
 	}	
 }
 
-forward(REFERER);
+return elgg_ok_response('', '', REFERRER);
 	
