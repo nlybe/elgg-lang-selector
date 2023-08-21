@@ -21,8 +21,7 @@ return [
 	],
     'bootstrap' => Bootstrap::class,
 	'actions' => [
-		'lang_selector/change' => [],
-		'access' => 'public',
+		'lang_selector/change' => ['access' => 'public'],
 	],
 	'events' => [
 		'ready' => [
