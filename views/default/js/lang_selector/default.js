@@ -1,7 +1,6 @@
 /**
  * @module lang_selector/default
  */
-// define(['jquery', 'elgg'], function ($, elgg) {
 define(function (require) {
     var elgg = require('elgg');
     var $ = require('jquery');
