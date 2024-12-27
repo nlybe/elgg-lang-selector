@@ -19,9 +19,13 @@ if (!empty($new_lang_id) && array_key_exists($new_lang_id, $installed)) {
 		elgg_trigger_event("update", "language", $user);
 
 		if (LangSelectorOptions::isLangRewriteURLEnabled() && isset($_SERVER['HTTP_REFERER']))	{ 
-			$newURL = LangSelectorOptions::alterLangURL($_SERVER['HTTP_REFERER'], $new_lang_id);		
+			$newURL = LangSelectorOptions::alterLangURL($_SERVER['HTTP_REFERER'], $new_lang_id);
 			if ($newURL) {
-				forward(elgg_normalize_url($newURL));
+				$output = [
+					'forward' => $newURL,
+				];
+				return elgg_ok_response($output, '', $newURL);		
+				// forward(elgg_normalize_url($newURL));
 			}
 		}
 	}	

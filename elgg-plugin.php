@@ -12,7 +12,7 @@ require_once(dirname(__FILE__) . '/lib/functions.php');
 return [
 	'plugin' => [
         'name' => 'Language Selector',
-		'version' => '5.1',
+		'version' => '5.1.1',
 		'dependencies' => [
 			'translation_editor' => [
 				'must_be_active' => false,
